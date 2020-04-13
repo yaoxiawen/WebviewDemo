@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>初次使用</title>
+</head>
+
+<body>
+<button onclick="callJS()">js的弹窗</button>
+<button onclick="callAndroid()">调用native方法</button>
+<script type="text/javascript">
+
+function callJS(){
+      alert("弹个弹窗");
+   }
+
+
+function add(x,y){
+    sum=x+y;
+    return sum;
+}
+
+function callAndroid(){
+            /*约定的url协议为：js://webview?arg1=111&arg2=222*/
+            document.location = "js://webview?arg1=111&arg2=222";
+         }
+
+
+</script>
+</body>
+
+</html>
